@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result Data</title>
+</head>
+<body>
+{% if result %}
+<p><strong>Thanks for the registration. Confirm your details</strong></p>
+
+<table border=1>
+{% for key,value in result.items() %}
+<tr>
+	<th>{{ key }}</th>
+	<td>{{ value }}</td>
+</tr>
+{% endfor %}	
+</table>
+{% else %}
+<p>Please go back and submit the form</p>
+{% endif %}
+</body>
+</html>
